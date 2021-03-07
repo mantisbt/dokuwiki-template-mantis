@@ -30,7 +30,7 @@ if (!defined('DOKU_INC')) die();
                 'accesskey="h" title="[H]"'
             );
             ?></div>
-            <div id="wiki"><?php
+            <div id="dokuwiki__header_wiki"><?php
                 tpl_link( wl(), 'Wiki');
             ?></div>
         </h1>
