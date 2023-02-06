@@ -8,7 +8,7 @@ if (!defined('DOKU_INC')) die();
 ?>
 
 <!-- ********** HEADER ********** -->
-<div id="dokuwiki__header"><div class="pad group">
+<header id="dokuwiki__header"><div class="pad group">
 
     <?php tpl_includeFile('header.html') ?>
 
@@ -17,19 +17,18 @@ if (!defined('DOKU_INC')) die();
             <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content']; ?></a></li>
         </ul>
 
-        <h1>
-            <div id="logo"><?php
+        <h1 class="logo"><?php
             // get logo either out of the template images folder or data/media folder
             $logoSize = array();
             $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
 
-            // display logo and wiki title in a link to the home page
+            // display logo in a link to the mantisbt.org home page
             tpl_link(
                 '/',
                 '<img src="'.$logo.'" '.$logoSize[3].' alt="" />',
-                'accesskey="h" title="[H]"'
+                'accesskey="h" title="' . tpl_getLang('home') . ' [h]"'
             );
-            ?></div>
+            ?>
             <div id="dokuwiki__header_wiki"><?php
                 tpl_link( wl(), 'Wiki');
             ?></div>
@@ -80,7 +79,5 @@ if (!defined('DOKU_INC')) die();
         </div>
     <?php endif ?>
 
-
-
     <hr class="a11y" />
-</div></div><!-- /header -->
+</div></header><!-- /header -->

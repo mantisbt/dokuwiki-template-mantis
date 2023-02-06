@@ -2,6 +2,7 @@
 *~
 *.swp
 *.bak
+.DS_Store
 .buildpath
 .cache
 .project
