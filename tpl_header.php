@@ -26,11 +26,15 @@ if (!defined('DOKU_INC')) die();
             tpl_link(
                 '/',
                 '<img src="'.$logo.'" '.$logoSize[3].' alt="" />',
-                'accesskey="h" title="' . tpl_getLang('home') . ' [h]"'
+                'title="MantisBT Web Site"'
             );
             ?>
             <div id="dokuwiki__header_wiki"><?php
-                tpl_link( wl(), 'Wiki');
+                tpl_link(
+                    wl(),
+                    'Wiki',
+                    'accesskey="h" title="Mantis Bug Tracker Wiki Home Page [h]"'
+                );
             ?></div>
         </h1>
     </div>
