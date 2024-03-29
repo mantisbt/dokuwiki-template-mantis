@@ -33,14 +33,18 @@ if (!defined('DOKU_INC')) die();
                 '<img src="'.$logo.'" '.$logoSize[3].' alt="" />',
                 'title="MantisBT Web Site"'
             );
+			?>
+			<div id="dokuwiki__header_wiki"><?php
 
-            // display logo and wiki title in a link to the home page
+			// display logo and wiki title in a link to the home page
             tpl_link(
                 wl(),
                 'Wiki',
                 'accesskey="h" title="Mantis Bug Tracker Wiki Home Page [h]"'
             );
-            ?></h1>
+            ?>
+			</div>
+		</h1>
         <?php if ($conf['tagline']) : ?>
             <p class="claim"><?php echo $conf['tagline']; ?></p>
         <?php endif ?>
